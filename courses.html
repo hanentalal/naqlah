@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>قوالب</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+    نقلة
+  </div>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="templates.html">قوالب سوشال ميديا</a>
+    <a href="plans.html">خطط تسويقية</a>
+    <a href="courses.html">دورات تعليمية</a>
+  </nav>
+
+  <div class="cart-btn" onclick="toggleCart()">
+    🛒 <span id="count">0</span>
+  </div>
+</header>
+
+<section class="section">
+<h2>دورات تعليمية  </h2>
+
+
+<h4>تُعد الدورات التعليمية وسيلة فعّالة لتطوير المهارات واكتساب المعرفة في مجالات متعددة، خاصة في عالم التسويق الرقمي.</h4>
+<h4>يحتوي هذا القسم على مجموعة من الدورات المصممة بأسلوب مبسط وعملي، تساعدك على التعلم خطوة بخطوة وتطبيق ما تعلمته لتحقيق نتائج ملموسة في مشاريعك.</h4>
+<br>
+<div class="grid">
+
+<!-- 8 Products with price & rating in the same line -->
+
+
+<div class="card">
+  <img src="images/course-1.png" alt="اساسيات التسويق الالكتروني ">
+  <div class="card-content">
+    <p> اساسيات التسويق الالكتروني</p>
+    <p class="price-rating">SAR 59 <span>⭐ 4.5</span></p>
+    <button class="btn" onclick="addToCart('اساسيات التسويق الالكتروني ','images/course-1.png',59,4.5)">إضافة</button>
+  </div>
+</div>
+
+
+
+
+
+<div class="card">
+  <img src="images/course-2.png" alt="استراتيجيات السوشال ميديا ">
+  <div class="card-content">
+    <p> استراتيجيات السوشال ميديا</p>
+    <p class="price-rating">SAR 45 <span>⭐ 4.0</span></p>
+    <button class="btn" onclick="addToCart('استراتيجيات السوشال ميديا ','images/course-2.png',45,4.0)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-3.png" alt="بناء خطة تسويقية ">
+  <div class="card-content">
+    <p> بناء خطة تسويقية</p>
+    <p class="price-rating">SAR 39 <span>⭐ 3.8</span></p>
+    <button class="btn" onclick="addToCart(' بناء خطة تسويقية','images/course-3.png',39,3.8)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-4.png" alt="دورة التسويق عبر انستغرام بااحتراف ">
+  <div class="card-content">
+    <p> دورة التسويق عبر انستغرام بااحتراف</p>
+    <p class="price-rating">SAR 99 <span>⭐ 4.9</span></p>
+    <button class="btn" onclick="addToCart('دورة التسويق عبر انستغرام بااحتراف ','images/course-4.png',99,4.9)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-5.png" alt="دورة تحسين محركات البحث للمبتدئين  ">
+  <div class="card-content">
+    <p> دورة تحسين محركات البحث للمبتدئين </p>
+    <p class="price-rating">SAR 25 <span>⭐ 3.5</span></p>
+    <button class="btn" onclick="addToCart(' دورة تحسين محركات البحث للمبتدئين ','images/course-5.png',25,3.5)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-6.png" alt=" دوره اساسيات google ads">
+  <div class="card-content">
+    <p> دوره اساسيات google ads</p>
+    <p class="price-rating">SAR 79 <span>⭐ 4.7</span></p>
+    <button class="btn" onclick="addToCart(' دوره اساسيات google ads','images/course-6.png',79,4.7)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-7.png" alt="دورة احتراف التسويق عبر السوشل ميديا  ">
+  <div class="card-content">
+    <p>دورة التسويق عبر السوشل ميديا  </p>
+    <p class="price-rating">SAR 69 <span>⭐ 4.3</span></p>
+    <button class="btn" onclick="addToCart(' دورة احتراف التسويق عبر السوشل ميديا ','images/course-7.png',69,4.3)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/course-8.png" alt=" دورة التسويق عبر التيك توك بااحتراف">
+  <div class="card-content">
+    <p>دورة التسويق عبر التيك توك بااحتراف </p>
+    <p class="price-rating">SAR 55 <span>⭐ 4.1</span></p>
+    <button class="btn" onclick="addToCart(' دورة التسويق عبر التيك توك بااحتراف','images/course-8.png',55,4.1)">إضافة</button>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- CART -->
+
+<div id="cart-panel" class="cart-panel">
+  <h3>السلة</h3>
+  <div id="cart-items"></div>
+  <div id="cart-total">
+    <p id="total-price">المجموع: SAR 0</p>
+    <button id="proceed-btn">المتابعة</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-section about">
+      <h3>نقلة</h3>
+      <p>ابدأ رحلتك الرقمية بسهولة مع "نقلة". أدوات، قوالب، وخطط تسويقية تساعدك على بناء حضور رقمي احترافي.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-section links">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="templates.html">قوالب سوشال ميديا</a></li>
+        <li><a href="plans.html">خطط تسويقية</a></li>
+        <li><a href="courses.html">دورات تعليمية</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-section social">
+      <h3>تابعنا</h3>
+      <div class="social-icons">
+        <a href="#" class="social-icon">🌐</a>
+        <a href="#" class="social-icon">📸</a>
+        <a href="#" class="social-icon">💬</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 نقلة | جميع الحقوق محفوظة
+  </div>
+</footer>
+
+</body>
+</html>

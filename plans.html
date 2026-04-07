@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>قوالب</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+    نقلة
+  </div>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="templates.html">قوالب سوشال ميديا</a>
+    <a href="plans.html">خطط تسويقية</a>
+    <a href="courses.html">دورات تعليمية</a>
+  </nav>
+
+  <div class="cart-btn" onclick="toggleCart()">
+    🛒 <span id="count">0</span>
+  </div>
+</header>
+
+<section class="section">
+<h2>  خطط تسويقية</h2>
+
+<h4>تُعتبر الخطط التسويقية من الأدوات الأساسية لنجاح أي مشروع أو حساب رقمي، حيث تساعد على توجيه الجهود بشكل منظم وفعّال لتحقيق الأهداف المرجوة.</h4>
+<h4>الخطط التسويقية تتضمن هذا القسم مجموعة شاملة يمكن تطبيقها على مختلف أنواع المشاريع والحسابات</h4>
+<h4></h4><br>
+<div class="grid">
+
+<!-- 8 Products with price & rating in the same line -->
+
+
+<div class="card">
+  <img src="images/plan1.png" alt="خطة تسويق لمدة ٣٠ يوم">
+  <div class="card-content">
+    <p>خطة تسويق لمدة ٣٠ يوم </p>
+    <p class="price-rating">SAR 59 <span>⭐ 4.5</span></p>
+    <button class="btn" onclick="addToCart(' خطة تسويق لمدة ٣٠ يوم','images/plan1.png',59,4.5)">إضافة</button>
+  </div>
+</div>
+
+
+
+
+
+<div class="card">
+  <img src="images/plan2.png" alt="خطة نمو حسابات التواصل الاجتماعي">
+  <div class="card-content">
+    <p> خطة نمو حسابات التواصل الاجتماعي</p>
+    <p class="price-rating">SAR 45 <span>⭐ 4.0</span></p>
+    <button class="btn" onclick="addToCart('خطة نمو حسابات التواصل الاجتماعي ','images/plan2.png',45,4.0)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan3.png" alt="خطة اطلاق منتج جديد">
+  <div class="card-content">
+    <p>خطة اطلاق منتج جديد</p>
+    <p class="price-rating">SAR 39 <span>⭐ 3.8</span></p>
+    <button class="btn" onclick="addToCart('خطة اطلاق منتج جديد','images/plan3.png',39,3.8)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan4.png" alt="خطة بناء العلامة التجارية">
+  <div class="card-content">
+    <p>خطة بناء العلامة التجارية</p>
+    <p class="price-rating">SAR 99 <span>⭐ 4.9</span></p>
+    <button class="btn" onclick="addToCart('خطة بناء العلامة التجارية','images/plan4.png',99,4.9)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan5.png" alt="خطة التسويق عبر المؤثرين">
+  <div class="card-content">
+    <p>خطة التسويق عبر المؤثرين</p>
+    <p class="price-rating">SAR 25 <span>⭐ 3.5</span></p>
+    <button class="btn" onclick="addToCart('خطة التسويق عبر المؤثرين','images/plan5.png',25,3.5)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan6.png" alt="خطة التسويق بالمحتوى">
+  <div class="card-content">
+    <p>خطة التسويق بالمحتوى</p>
+    <p class="price-rating">SAR 79 <span>⭐ 4.7</span></p>
+    <button class="btn" onclick="addToCart('خطة التسويق بالمحتوى','images/plan6.png',79,4.7)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan7.png" alt="خطة تحويل العملاء إلى متابعين">
+  <div class="card-content">
+    <p>خطة تحويل العملاء إلى متابعين</p>
+    <p class="price-rating">SAR 69 <span>⭐ 4.3</span></p>
+    <button class="btn" onclick="addToCart('خطة تحويل العملاء إلى متابعين','images/plan7.png',69,4.3)">إضافة</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/plan8.png" alt="خطة زيادة المبيعات">
+  <div class="card-content">
+    <p>خطة زيادة المبيعات</p>
+    <p class="price-rating">SAR 55 <span>⭐ 4.1</span></p>
+    <button class="btn" onclick="addToCart('خطة زيادة المبيعات','images/plan8.png',55,4.1)">إضافة</button>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- CART -->
+
+<div id="cart-panel" class="cart-panel">
+  <h3>السلة</h3>
+  <div id="cart-items"></div>
+  <div id="cart-total">
+    <p id="total-price">المجموع: SAR 0</p>
+    <button id="proceed-btn">المتابعة</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-section about">
+      <h3>نقلة</h3>
+      <p>ابدأ رحلتك الرقمية بسهولة مع "نقلة". أدوات، قوالب، وخطط تسويقية تساعدك على بناء حضور رقمي احترافي.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-section links">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="templates.html">قوالب سوشال ميديا</a></li>
+        <li><a href="plans.html">خطط تسويقية</a></li>
+        <li><a href="courses.html">دورات تعليمية</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-section social">
+      <h3>تابعنا</h3>
+      <div class="social-icons">
+        <a href="#" class="social-icon">🌐</a>
+        <a href="#" class="social-icon">📸</a>
+        <a href="#" class="social-icon">💬</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 نقلة | جميع الحقوق محفوظة
+  </div>
+</footer>
+
+</body>
+</html>
