@@ -1,0 +1,455 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= ROOT COLORS ================= */
+:root {
+  --primary: #3B1E54;   /* Dark Purple */
+  --secondary: #9B7EBD; /* Light Purple */
+  --gold: #C6A75E;      /* Light Gold */
+  --white: #FFFFFF;
+  --star: #F0A500;      /* Gold star color */
+}
+
+/* ================= BODY ================= */
+
+
+body {
+  font-family: 'Cairo', 'Poppins', sans-serif;
+  background: var(--white);
+  color: var(--primary);
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 35px;
+}
+
+.navbar nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--gold);
+}
+
+/* ================= CART BUTTON ================= */
+.cart-btn {
+  cursor: pointer;
+  background: var(--gold);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  opacity: 0.85;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 70vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ================= CARD CONTENT ================= */
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content p {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* ================= PRICE & RATING ================= */
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.price-rating span {
+  color: var(--gold);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--primary);
+}
+
+/* ================= CART PANEL ================= */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -380px;
+  width: 380px;
+  height: 100%;
+  background: var(--white);
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.cart-panel.active {
+  right: 0;
+}
+
+.cart-panel h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ================= CART ITEMS GRID ================= */
+#cart-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ================= CART CARD ================= */
+.cart-card {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.cart-card img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-card p {
+  font-size: 12px;
+  margin: 3px 0;
+  font-weight: 600;
+}
+
+.cart-card button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ================= CART TOTAL ================= */
+#cart-total {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#cart-total p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* ================= PROCEED BUTTON ================= */
+#proceed-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: not-allowed;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  #cart-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Cairo', sans-serif;
+  font-weight: 700;
+}
+
+p, a, button, .card-content p {
+  font-family: 'Cairo', 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+/* ILLUSTRATION GRID */
+/* ================= ILLUSTRATION GRID ================= */
+.illustration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 2px;                             /* small spacing between cards */
+  width: 100vw;                            /* 90% of viewport width */
+  max-width: 100%;                        /* don’t let it shrink */
+  margin: 10px auto;                      /* center horizontally */
+  padding: 0;                             /* remove extra padding */
+  box-sizing: border-box;
+}
+
+/* ================= CARD ================= */
+.illustration-card {
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 10px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.illustration-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.illustration-card img {
+  width: 100%;
+  height: 220px; /* slightly taller for impact */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.illustration-card p {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .illustration-grid {
+    grid-template-columns: 1fr; /* stack cards on mobile */
+    width: 95vw;                /* almost full width on mobile */
+    gap: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--primary); /* dark purple */
+  color: var(--white);
+  padding: 40px 20px 20px 20px;
+  font-family: 'Cairo', 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--gold); /* golden headings */
+}
+
+.footer-section p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--gold);
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--gold);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 15px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
