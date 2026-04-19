@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Cairo', 'Poppins', sans-serif;
-  background: var(--white);
+  background: #ffdc73;
   color: var(--primary);
   overflow-x: hidden;
 }
@@ -115,6 +115,7 @@ body {
 }
 
 /* ================= CARD ================= */
+/* ================= CARD ================= */
 .card {
   border-radius: 15px;
   overflow: hidden;
@@ -129,8 +130,8 @@ body {
 
 .card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;        /* let image define height */
+  display: block;      /* removes extra spacing */
 }
 
 /* ================= CARD CONTENT ================= */
@@ -452,4 +453,353 @@ p, a, button, .card-content p {
   .social-icons {
     justify-content: center;
   }
+}
+
+
+
+
+
+
+
+
+
+
+/* AUTH */
+.auth-btn {
+  cursor: pointer;
+  background: var(--white);
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  background: var(--gold);
+}
+
+.user-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+/* ================= AUTH MODAL ================= */
+.auth-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.auth-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: var(--gold);
+  color: var(--primary);
+}
+
+.auth-box span {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* AUTH BUTTON */
+.auth-btn {
+  background: var(--white);
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.user-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+
+
+/* USER MENU */
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 180px;
+  display: none;
+  overflow: hidden;
+  z-index: 1000;
+  text-align: right;
+  color:black;
+}
+
+/* SHOW */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* USER NAME */
+.user-name {
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+/* ITEMS */
+.dropdown-menu p {
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color:black;
+}
+
+.dropdown-menu p:hover {
+  background: #f5f5f5;
+}
+
+
+
+
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  background: #ffdc73;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: right;
+}
+
+.about-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.about-container p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.about-box {
+  background: #ffdc73;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-box h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.about-box ul {
+  padding-right: 20px;
+}
+
+.about-box ul li {
+  margin-bottom: 8px;
+}
+
+/* Highlight box */
+.highlight {
+  background: var(--primary);
+  color: white;
+}
+
+.highlight h3 {
+  color: var(--gold);
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+/* Instagram hover */
+.social-icon.instagram:hover {
+  background: #E1306C;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* TikTok hover */
+.social-icon.tiktok:hover {
+  background: #000;
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+/* Button */
+.dir-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.dir-btn:hover {
+  background: var(--gold);
+  color: var(--primary);
+}
+
+
+
+
+/* ================= FULL WIDTH SLIDER ================= */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Each slide fills full screen width */
+.slider-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* IMAGE FULL WIDTH */
+.slider-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT OVER IMAGE */
+.slider-card p {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* ACTIVE SLIDE */
+.slider-card.active {
+  opacity: 1;
+}
+
+/* Buttons container */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Make both buttons equal */
+.card-buttons .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* Details button style */
+.details-btn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;   /* removes underline */
+}
+
+.details-btn:hover {
+  background: var(--primary);
+  color: white;
 }
