@@ -2,17 +2,18 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Naqlah</title>
+<title>نقلة</title>
 <link rel="stylesheet" href="css/style.css">
-<!-- Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <header class="navbar">
   <div class="logo">
-    <img src="images/logo.png" alt="Logo">
+    <img src="images/logo.png">
     نقلة
   </div>
 
@@ -21,46 +22,149 @@
     <a href="templates.html">قوالب سوشال ميديا</a>
     <a href="plans.html">خطط تسويقية</a>
     <a href="courses.html">دورات تعليمية</a>
+    <a href="index.html#about">من نحن</a>
   </nav>
 
-  <div class="cart-btn" onclick="toggleCart()">
-    🛒 <span id="count">0</span>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="count">0</span>
+    </div>
+
+    <div id="auth-area"></div>
   </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
   <div>
     <h1>ابدأ رحلتك الرقمية بسهولة مع "نقلة" 🚀</h1>
-    <p>أدوات، قوالب، وخطط تسويقية تساعدك على بناء حضور رقمي احترافي، بدون تعقيد أو خبرة مسبقة.</p>
+    <p>أدوات، قوالب، وخطط تسويقية تساعدك على بناء حضور رقمي احترافي.</p>
   </div>
 </section>
 
-<!-- ILLUSTRATION SECTION -->
-<section class="section">
-  <div class="illustration-grid">
-    <div class="illustration-card">
-      <img src="images/social-media.png" alt="قوالب سوشال ميديا">
-      <p>قوالب سوشال ميديا</p>
-    </div>
-    <div class="illustration-card">
-      <img src="images/plans.png" alt="خطط تسويقية">
-      <p>خطط تسويقية</p>
-    </div>
-    <div class="illustration-card">
-      <img src="images/courses.jpg" alt="دورات تعليمية">
-      <p>دورات تعليمية</p>
-    </div>
-  </div>
-</section>
-
-<!-- CART PANEL -->
+<!-- CART -->
 <div id="cart-panel" class="cart-panel">
   <h3>السلة</h3>
   <div id="cart-items"></div>
+  <div id="cart-total">
+    <p id="total-price">المجموع: 0</p>
+  </div>
 </div>
 
+<!-- ================= LOGIN MODAL ================= -->
+<div id="auth-modal" class="auth-modal">
+  <div class="auth-box">
+
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <!-- LOGIN -->
+    <div id="login-form">
+      <h2>تسجيل الدخول</h2>
+      <input type="text" id="login-username" placeholder="اسم المستخدم">
+      <input type="password" id="login-password" placeholder="كلمة المرور">
+      <button onclick="handleLogin()">دخول</button>
+      <p>ليس لديك حساب؟ <span onclick="showSignup()">إنشاء حساب</span></p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signup-form" style="display:none;">
+      <h2>إنشاء حساب</h2>
+
+      <input type="text" id="first-name" placeholder="الاسم الأول">
+      <input type="text" id="last-name" placeholder="اسم العائلة">
+      <input type="text" id="mobile" placeholder="رقم الجوال">
+
+      <input type="text" id="signup-username" placeholder="اسم المستخدم">
+      <input type="password" id="signup-password" placeholder="كلمة المرور">
+
+      <button onclick="handleSignup()">إنشاء</button>
+
+      <p>لديك حساب؟ <span onclick="showLogin()">تسجيل الدخول</span></p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- ================= FULL WIDTH SLIDER ================= -->
+<section class="hero-slider">
+
+  <div class="slider-card active">
+    <img src="images/social-media.png">
+    <p>قوالب سوشال ميديا</p>
+  </div>
+
+  <div class="slider-card">
+    <img src="images/plans.png">
+    <p>خطط تسويقية</p>
+  </div>
+
+  <div class="slider-card">
+    <img src="images/courses.jpg">
+    <p>دورات تعليمية</p>
+  </div>
+
+</section>
+
+
+</section>
+
+<!-- ================= ABOUT US ================= -->
+<section id="about" class="about-section">
+    <div class="about-container">
+
+    <h2>🚀 من نحن – نقلة</h2>
+
+    <p>
+      في نقلة، نؤمن أن النجاح في العالم الرقمي يبدأ بخطوة ذكية… وهنا تبدأ نقلتك.
+    </p>
+
+    <p>
+      نحن منصة رقمية متخصصة في تقديم حلول تسويقية حديثة تساعد الأفراد وأصحاب المشاريع على تطوير حضورهم الرقمي بطريقة احترافية وسهلة. نهدف إلى تبسيط التسويق الإلكتروني من خلال تقديم خطط، قوالب، ودورات تعليمية مصممة بعناية لتناسب احتياجات السوق الحالي.
+    </p>
+
+    <div class="about-box">
+      <h3>✨ رؤيتنا</h3>
+      <p>
+        أن نكون الوجهة الأولى لكل من يسعى لتطوير مشروعه رقميًا، وصناعة تأثير حقيقي في عالم التسويق الإلكتروني.
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h3>🎯 رسالتنا</h3>
+      <p>
+        تمكين المستخدمين من تحقيق نتائج ملموسة من خلال أدوات تسويقية عملية، مبنية على أحدث استراتيجيات وتقنيات العصر.
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h3>📦 ماذا نقدم؟</h3>
+      <ul>
+        <li>خطط تسويقية جاهزة وقابلة للتعديل</li>
+        <li>قوالب احترافية تسهل عليك العمل</li>
+        <li>دورات تعليمية في أساسيات ومتقدم التسويق الإلكتروني</li>
+        <li>محتوى يساعدك تفهم السوق وتكبر مشروعك بثقة</li>
+      </ul>
+    </div>
+
+    <div class="about-box highlight">
+      <h3>💡 لماذا “نقلة”؟</h3>
+      <p>
+        لأننا نؤمن أن كل مشروع يحتاج نقلة نوعية لينجح، وإحنا هنا نكون جزء من هذه الرحلة.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
 <script src="js/script.js"></script>
+
+
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -85,12 +189,26 @@
     </div>
 
     <!-- SOCIAL -->
+    <!-- SOCIAL -->
     <div class="footer-section social">
       <h3>تابعنا</h3>
+
       <div class="social-icons">
-        <a href="#" class="social-icon">🌐</a>
-        <a href="#" class="social-icon">📸</a>
-        <a href="#" class="social-icon">💬</a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/naqalh.sa?igsh=ZGE4M3E0NWN0N3gx&utm_source=qr"
+          target="_blank"
+          class="social-icon instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@nqlah.sa?_r=1&_t=ZS-95deiJVVhBQ"
+          target="_blank"
+          class="social-icon tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
       </div>
     </div>
 
@@ -100,6 +218,7 @@
     &copy; 2026 نقلة | جميع الحقوق محفوظة
   </div>
 </footer>
+
 
 </body>
 </html>
