@@ -2,17 +2,18 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Naqlah</title>
+<title>قوالب</title>
 <link rel="stylesheet" href="css/style.css">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <header class="navbar">
   <div class="logo">
-    <img src="images/logo.png" alt="Logo">
+    <img src="images/logo.png">
     نقلة
   </div>
 
@@ -21,10 +22,15 @@
     <a href="templates.html">قوالب سوشال ميديا</a>
     <a href="plans.html">خطط تسويقية</a>
     <a href="courses.html">دورات تعليمية</a>
+    <a href="index.html#about">من نحن</a>
   </nav>
 
-  <div class="cart-btn" onclick="toggleCart()">
-    🛒 <span id="count">0</span>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="count">0</span>
+    </div>
+
+    <div id="auth-area"></div>
   </div>
 </header>
 
@@ -38,80 +44,77 @@
 
 <!-- 8 Products with price & rating in the same line -->
 
-
 <div class="card">
-  <img src="images/plan1.png" alt="خطة تسويق لمدة ٣٠ يوم">
+  <img src="images/plan2.jpeg" alt="خطة تسويق لمدة 30 يوم">
+
   <div class="card-content">
-    <p>خطة تسويق لمدة ٣٠ يوم </p>
-    <p class="price-rating">SAR 59 <span>⭐ 4.5</span></p>
-    <button class="btn" onclick="addToCart(' خطة تسويق لمدة ٣٠ يوم','images/plan1.png',59,4.5)">إضافة</button>
+    <p>خطة تسويق لمدة 30 يوم</p>
+
+    <p class="price-rating">
+      SAR 59 <span>⭐ 4.5</span>
+    </p>
+
+    <div class="card-buttons">
+      <button class="btn" onclick="addToCart('خطة تسويق لمدة 30 يوم','images/plan2.jpeg',59,4.5)">
+        اضافة الى السلة
+      </button>
+
+      <a href="products/plan-1.html" class="btn details-btn">
+        تفاصيل
+      </a>
+    </div>
   </div>
 </div>
 
 
 
-
-
 <div class="card">
-  <img src="images/plan2.png" alt="خطة نمو حسابات التواصل الاجتماعي">
+  <img src="images/plan1.jpeg" alt="خطة نمو حسابات السوشال ميديا">
+
   <div class="card-content">
-    <p> خطة نمو حسابات التواصل الاجتماعي</p>
-    <p class="price-rating">SAR 45 <span>⭐ 4.0</span></p>
-    <button class="btn" onclick="addToCart('خطة نمو حسابات التواصل الاجتماعي ','images/plan2.png',45,4.0)">إضافة</button>
+    <p>خطة نمو حسابات السوشال ميديا</p>
+
+
+
+    <p class="price-rating">
+      SAR 45 <span>⭐ 4.0</span>
+    </p>
+
+    <div class="card-buttons">
+      <button class="btn" onclick="addToCart('خطة نمو حسابات السوشال ميديا','images/plan1.jpeg',45,4.0)">
+        اضافة الى السلة
+      </button>
+
+      <a href="products/plan-2.html" class="btn details-btn">
+        تفاصيل
+      </a>
+    </div>
   </div>
 </div>
 
-<div class="card">
-  <img src="images/plan3.png" alt="خطة اطلاق منتج جديد">
-  <div class="card-content">
-    <p>خطة اطلاق منتج جديد</p>
-    <p class="price-rating">SAR 39 <span>⭐ 3.8</span></p>
-    <button class="btn" onclick="addToCart('خطة اطلاق منتج جديد','images/plan3.png',39,3.8)">إضافة</button>
-  </div>
-</div>
+
 
 <div class="card">
-  <img src="images/plan4.png" alt="خطة بناء العلامة التجارية">
-  <div class="card-content">
-    <p>خطة بناء العلامة التجارية</p>
-    <p class="price-rating">SAR 99 <span>⭐ 4.9</span></p>
-    <button class="btn" onclick="addToCart('خطة بناء العلامة التجارية','images/plan4.png',99,4.9)">إضافة</button>
-  </div>
-</div>
+  <img src="images/plan3.jpg" alt="خطة إطلاق منتج جديد">
 
-<div class="card">
-  <img src="images/plan5.png" alt="خطة التسويق عبر المؤثرين">
   <div class="card-content">
-    <p>خطة التسويق عبر المؤثرين</p>
-    <p class="price-rating">SAR 25 <span>⭐ 3.5</span></p>
-    <button class="btn" onclick="addToCart('خطة التسويق عبر المؤثرين','images/plan5.png',25,3.5)">إضافة</button>
-  </div>
-</div>
+    <p>خطة إطلاق منتج جديد</p>
 
-<div class="card">
-  <img src="images/plan6.png" alt="خطة التسويق بالمحتوى">
-  <div class="card-content">
-    <p>خطة التسويق بالمحتوى</p>
-    <p class="price-rating">SAR 79 <span>⭐ 4.7</span></p>
-    <button class="btn" onclick="addToCart('خطة التسويق بالمحتوى','images/plan6.png',79,4.7)">إضافة</button>
-  </div>
-</div>
 
-<div class="card">
-  <img src="images/plan7.png" alt="خطة تحويل العملاء إلى متابعين">
-  <div class="card-content">
-    <p>خطة تحويل العملاء إلى متابعين</p>
-    <p class="price-rating">SAR 69 <span>⭐ 4.3</span></p>
-    <button class="btn" onclick="addToCart('خطة تحويل العملاء إلى متابعين','images/plan7.png',69,4.3)">إضافة</button>
-  </div>
-</div>
 
-<div class="card">
-  <img src="images/plan8.png" alt="خطة زيادة المبيعات">
-  <div class="card-content">
-    <p>خطة زيادة المبيعات</p>
-    <p class="price-rating">SAR 55 <span>⭐ 4.1</span></p>
-    <button class="btn" onclick="addToCart('خطة زيادة المبيعات','images/plan8.png',55,4.1)">إضافة</button>
+    <p class="price-rating">
+      SAR 39 <span>⭐ 3.8</span>
+    </p>
+
+    <div class="card-buttons">
+      <button class="btn" onclick="addToCart('خطة إطلاق منتج جديد','images/plan3.jpg',39,3.8)">
+        اضافة الى السلة
+      </button>
+
+      <a href="products/plan-3.html" class="btn details-btn">
+        تفاصيل
+      </a>
+    </div>
   </div>
 </div>
 
@@ -128,8 +131,42 @@
     <button id="proceed-btn">المتابعة</button>
   </div>
 </div>
+<!-- ================= LOGIN MODAL ================= -->
+<div id="auth-modal" class="auth-modal">
+  <div class="auth-box">
+
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <!-- LOGIN -->
+    <div id="login-form">
+      <h2>تسجيل الدخول</h2>
+      <input type="text" id="login-username" placeholder="اسم المستخدم">
+      <input type="password" id="login-password" placeholder="كلمة المرور">
+      <button onclick="handleLogin()">دخول</button>
+      <p>ليس لديك حساب؟ <span onclick="showSignup()">إنشاء حساب</span></p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signup-form" style="display:none;">
+      <h2>إنشاء حساب</h2>
+
+      <input type="text" id="first-name" placeholder="الاسم الأول">
+      <input type="text" id="last-name" placeholder="اسم العائلة">
+      <input type="text" id="mobile" placeholder="رقم الجوال">
+
+      <input type="text" id="signup-username" placeholder="اسم المستخدم">
+      <input type="password" id="signup-password" placeholder="كلمة المرور">
+
+      <button onclick="handleSignup()">إنشاء</button>
+
+      <p>لديك حساب؟ <span onclick="showLogin()">تسجيل الدخول</span></p>
+    </div>
+
+  </div>
+</div>
 
 <script src="js/script.js"></script>
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -154,12 +191,26 @@
     </div>
 
     <!-- SOCIAL -->
+    <!-- SOCIAL -->
     <div class="footer-section social">
       <h3>تابعنا</h3>
+
       <div class="social-icons">
-        <a href="#" class="social-icon">🌐</a>
-        <a href="#" class="social-icon">📸</a>
-        <a href="#" class="social-icon">💬</a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/naqalh.sa?igsh=ZGE4M3E0NWN0N3gx&utm_source=qr"
+          target="_blank"
+          class="social-icon instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@nqlah.sa?_r=1&_t=ZS-95deiJVVhBQ"
+          target="_blank"
+          class="social-icon tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
       </div>
     </div>
 
