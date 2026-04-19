@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>نقلة</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.png">
+    نقلة
+  </div>
+
+
+  <nav>
+    <a href="../index.html">الرئيسية</a>
+    <a href="../templates.html">قوالب سوشال ميديا</a>
+    <a href="../plans.html">خطط تسويقية</a>
+    <a href="../courses.html">دورات تعليمية</a>
+    <a href="../index.html#about">من نحن</a>
+  </nav>
+
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="count">0</span>
+    </div>
+
+    <div id="auth-area"></div>
+  </div>
+</header>
+
+
+
+<!-- ================= TEMPLATE PRODUCT ================= -->
+<div class="template-card">
+
+  <div class="template-content">
+
+    <!-- TOP ROW -->
+    <div class="template-top">
+
+      <img src="images/plan2.jpeg" alt="خطة تسويق لمدة 30 يوم" class="template-img">
+
+      <h2>خطة تسويق لمدة 30 يوم</h2>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="template-info">
+
+      <p>
+        خطة يومية جاهزة تقودك خطوة بخطوة لزيادة التفاعل ونمو حسابك بشكل ملحوظ.
+      </p>
+
+      <p>
+        تساعدك على تنظيم المحتوى اليومي، وتطبيق استراتيجيات تسويقية فعّالة بدون تعقيد.
+      </p>
+
+      <p>
+        مناسبة لأصحاب المشاريع وصناع المحتوى الذين يريدون نتائج سريعة ومنظمة خلال 30 يوم.
+      </p>
+
+      <h3 class="price">السعر: 59 ريال</h3>
+
+      <button class="buy-btn" onclick="openTemplateModal()">
+        شراء الآن
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CART -->
+<div id="cart-panel" class="cart-panel">
+  <h3>السلة</h3>
+  <div id="cart-items"></div>
+  <div id="cart-total">
+    <p id="total-price">المجموع: 0</p>
+  </div>
+</div>
+
+<!-- ================= LOGIN MODAL ================= -->
+<div id="auth-modal" class="auth-modal">
+  <div class="auth-box">
+
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <!-- LOGIN -->
+    <div id="login-form">
+      <h2>تسجيل الدخول</h2>
+      <input type="text" id="login-username" placeholder="اسم المستخدم">
+      <input type="password" id="login-password" placeholder="كلمة المرور">
+      <button onclick="handleLogin()">دخول</button>
+      <p>ليس لديك حساب؟ <span onclick="showSignup()">إنشاء حساب</span></p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signup-form" style="display:none;">
+      <h2>إنشاء حساب</h2>
+
+      <input type="text" id="first-name" placeholder="الاسم الأول">
+      <input type="text" id="last-name" placeholder="اسم العائلة">
+      <input type="text" id="mobile" placeholder="رقم الجوال">
+
+      <input type="text" id="signup-username" placeholder="اسم المستخدم">
+      <input type="password" id="signup-password" placeholder="كلمة المرور">
+
+      <button onclick="handleSignup()">إنشاء</button>
+
+      <p>لديك حساب؟ <span onclick="showLogin()">تسجيل الدخول</span></p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+<script src="js/script2.js"></script>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-section about">
+      <h3>نقلة</h3>
+      <p>ابدأ رحلتك الرقمية بسهولة مع "نقلة". أدوات، قوالب، وخطط تسويقية تساعدك على بناء حضور رقمي احترافي.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-section links">
+      <h3>روابط سريعة</h3>
+      <ul>
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../templates.html">قوالب سوشال ميديا</a></li>
+        <li><a href="../plans.html">خطط تسويقية</a></li>
+        <li><a href="../courses.html">دورات تعليمية</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL -->
+    <!-- SOCIAL -->
+    <div class="footer-section social">
+      <h3>تابعنا</h3>
+
+      <div class="social-icons">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/naqalh.sa?igsh=ZGE4M3E0NWN0N3gx&utm_source=qr"
+          target="_blank"
+          class="social-icon instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@nqlah.sa?_r=1&_t=ZS-95deiJVVhBQ"
+          target="_blank"
+          class="social-icon tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 نقلة | جميع الحقوق محفوظة
+  </div>
+</footer>
+
+<!-- ================= TEMPLATE MODAL ================= -->
+<div id="template-modal" class="auth-modal">
+  <div class="auth-box">
+
+    <span class="close-btn" onclick="closeTemplateModal()">×</span>
+
+    <img src="images/plan2.jpeg" style="width:100%; border-radius:10px; margin-bottom:10px;">
+
+    <h2>خطة تسويق لمدة 30 يوم</h2>
+
+    <p>
+      خطة يومية جاهزة تقودك خطوة بخطوة لزيادة التفاعل ونمو حسابك بشكل ملحوظ.
+    </p>
+
+    <p>
+      تحتوي على خطوات عملية يومية تساعدك على بناء حضور قوي وتحقيق نتائج واضحة خلال فترة قصيرة.
+    </p>
+
+    <h3>السعر: 59 ريال</h3>
+
+    <button onclick="confirmPurchase()" style="width:100%; margin-top:10px;">
+      تأكيد الشراء
+    </button>
+
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
