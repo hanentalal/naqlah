@@ -74,7 +74,7 @@ body {
 /* ================= HERO ================= */
 .hero {
   height: 70vh;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: #C6A75E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -626,7 +626,7 @@ p, a, button, .card-content p {
 
 /* ================= ABOUT SECTION ================= */
 .about-section {
-  background: #C6A75E;
+  background: #C6A75E
   padding: 60px 20px;
 }
 
@@ -649,7 +649,7 @@ p, a, button, .card-content p {
 }
 
 .about-box {
-  background: #ffdc73;
+  background: #C6A75E;
   padding: 20px;
   border-radius: 12px;
   margin-top: 20px;
